@@ -62,7 +62,8 @@
             ariaDescribedById: null,
             ariaDescribedBySelector: null,
             bodyClassName: 'ngdialog-open',
-            width: null
+            width: null,
+            resolve: {}
         };
 
         this.setForceHtmlReload = function (_useIt) {
@@ -863,7 +864,9 @@
                         closeByEscape: attrs.ngDialogCloseByEscape === 'false' ? false : (attrs.ngDialogCloseByEscape === 'true' ? true : defaults.closeByEscape),
                         overlay: attrs.ngDialogOverlay === 'false' ? false : (attrs.ngDialogOverlay === 'true' ? true : defaults.overlay),
                         preCloseCallback: attrs.ngDialogPreCloseCallback || defaults.preCloseCallback,
-                        bodyClassName: attrs.ngDialogBodyClass || defaults.bodyClassName
+                        bodyClassName: attrs.ngDialogBodyClass || defaults.bodyClassName,
+                        width: attrs.ngWidth || defaults.width,
+                        resolve: attrs.resolve || defaults.resolve
                     });
                 });
             }
